@@ -90,6 +90,25 @@ FlightGuard consists of four main smart contracts that work together to create a
    ```
 4. Configure contract addresses in Registry
 
+## Running the Frontend
+
+1. Navigate into the flightguard-frontend directory:
+   ```bash
+   cd flightguard-frontend
+   ```
+
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Update the contract addresses in `src/contracts/config.js` with your deployed contract addresses.
+
+4. Start the application:
+   ```bash
+   npm start
+   ```
+
 ##  Usage Examples
 
 ### Purchase Insurance Policy
