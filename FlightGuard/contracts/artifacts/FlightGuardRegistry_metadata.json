@@ -1,0 +1,426 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "airlineCode",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "airlineAddress",
+						"type": "address"
+					}
+				],
+				"name": "AirlineRegistered",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "dataSource",
+						"type": "address"
+					}
+				],
+				"name": "DataSourceAdded",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "dataSource",
+						"type": "address"
+					}
+				],
+				"name": "DataSourceRemoved",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newLiquidityPool",
+						"type": "address"
+					}
+				],
+				"name": "LiquidityPoolUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newPolicyContract",
+						"type": "address"
+					}
+				],
+				"name": "PolicyContractUpdated",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"internalType": "address",
+						"name": "newTokenContract",
+						"type": "address"
+					}
+				],
+				"name": "TokenContractUpdated",
+				"type": "event"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_dataSource",
+						"type": "address"
+					}
+				],
+				"name": "addTrustedDataSource",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_airlineCode",
+						"type": "string"
+					}
+				],
+				"name": "getAirlineAddress",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_dataSource",
+						"type": "address"
+					}
+				],
+				"name": "isDataSourceTrusted",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "liquidityPoolContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "policyContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_airlineCode",
+						"type": "string"
+					},
+					{
+						"internalType": "address",
+						"name": "_airlineAddress",
+						"type": "address"
+					}
+				],
+				"name": "registerAirline",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "registeredAirlines",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_dataSource",
+						"type": "address"
+					}
+				],
+				"name": "removeTrustedDataSource",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_liquidityPoolContract",
+						"type": "address"
+					}
+				],
+				"name": "setLiquidityPool",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_policyContract",
+						"type": "address"
+					}
+				],
+				"name": "setPolicyContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_tokenContract",
+						"type": "address"
+					}
+				],
+				"name": "setTokenContract",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "tokenContract",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "trustedDataSources",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"details": "Coordinates the different components of the FlightGuard ecosystem",
+			"kind": "dev",
+			"methods": {
+				"addTrustedDataSource(address)": {
+					"details": "Add a trusted data source for flight information",
+					"params": {
+						"_dataSource": "Address of the oracle or data provider"
+					}
+				},
+				"constructor": {
+					"details": "Constructor sets initial owner"
+				},
+				"getAirlineAddress(string)": {
+					"details": "Get the airline address for a specific airline code",
+					"params": {
+						"_airlineCode": "IATA code for the airline"
+					},
+					"returns": {
+						"_0": "The registered address for that airline"
+					}
+				},
+				"isDataSourceTrusted(address)": {
+					"details": "Check if a data source is trusted",
+					"params": {
+						"_dataSource": "Address to check"
+					},
+					"returns": {
+						"_0": "True if the data source is trusted"
+					}
+				},
+				"registerAirline(string,address)": {
+					"details": "Register an airline in the system",
+					"params": {
+						"_airlineAddress": "Contract address or wallet for the airline",
+						"_airlineCode": "IATA code for the airline (e.g., \"AA\" for American Airlines)"
+					}
+				},
+				"removeTrustedDataSource(address)": {
+					"details": "Remove a trusted data source",
+					"params": {
+						"_dataSource": "Address of the oracle or data provider to remove"
+					}
+				},
+				"setLiquidityPool(address)": {
+					"details": "Set the liquidity pool contract address",
+					"params": {
+						"_liquidityPoolContract": "Address of the LiquidityPool contract"
+					}
+				},
+				"setPolicyContract(address)": {
+					"details": "Set the policy contract address",
+					"params": {
+						"_policyContract": "Address of the FlightGuardPolicy contract"
+					}
+				},
+				"setTokenContract(address)": {
+					"details": "Set the token contract address",
+					"params": {
+						"_tokenContract": "Address of the FlightGuardToken contract"
+					}
+				},
+				"transferOwnership(address)": {
+					"details": "Transfer ownership of the registry",
+					"params": {
+						"_newOwner": "Address of the new owner"
+					}
+				}
+			},
+			"title": "FlightGuardRegistry",
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"FlightGuard/contracts/FlightGuardRegistry.sol": "FlightGuardRegistry"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"FlightGuard/contracts/FlightGuardRegistry.sol": {
+			"keccak256": "0x95383bf15a673e72641cd510800c045265d8d14781c54960e9b387605645075c",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f027dcca3f3bd0b5b91c9a688a366eac276d0ce19326d4febc1faef84e9e1862",
+				"dweb:/ipfs/QmYAPGUMC1rRjHNFvgqNV7Y5gzEADTecE57ahG35vvK1mZ"
+			]
+		}
+	},
+	"version": 1
+}
